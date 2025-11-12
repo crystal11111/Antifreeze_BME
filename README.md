@@ -1,10 +1,19 @@
-- ncbi.fasta: NCBI datasets with query: "antifreeze protein"[Title/Abstract] AND (Actinopterygii OR Insecta)
+- uniprotkb_nonfishAFP.tsv
+- reviewed:true AND keyword:KW-0047 AND NOT taxonomy_id:7898
 
-- 1️⃣ Checking/cleaning your FASTA -> Use CD-HIT to remove redundant sequences (90% identity is standard).
-    - cd-hit -i ncbi.fasta -o afp_nr90.fasta -c 0.9 -n 5 -d 0
+- uniprotkb_fishAFP.tsv
+- reviewed:true AND keyword:KW-0047 AND taxonomy_id:7898
+
+- uniprotkb_allfishNonAFP.tsv
+- reviewed:true AND NOT keyword:KW-0047 AND taxonomy_id:7898
+
+- uniprotkb_allAFP.tsv
+- reviewed:true AND keyword:KW-0047
+
+cat data/raw/uniprotkb_fishAFP.fasta data/raw/uniprotkb_nonfishAFP.fasta > data/positives/afp_all_raw.faa
+cd-hit -i data/positives/afp_all_raw.faa -o data/positives/afp_all_c90.faa -c 0.90 -n 5
+
 - 2️⃣ Running MSA (Multiple Sequence Alignment)
-    - mafft --localpair --maxiterate 1000 afp_nr90.fasta > afp_aligned.fasta
-- 3️⃣ Detecting motifs (known and de novo)
-    - run count_motifs.py
-- 4️⃣ Saving features for later analysis (like regression modeling)
-    - run combine_features.py
+"""
+cat data/raw/uniprotkb_fishAFP.fasta data/raw/uniprotkb_nonfishAFP.fasta > data/positives/afp_all_raw.faa
+cd-hit -i data/positives/afp_all_raw.faa -o data/positives/afp_all_c90.faa -c 0.90 -n 5"""

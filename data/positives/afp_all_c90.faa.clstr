@@ -1,0 +1,80 @@
+>Cluster 0
+0	892aa, >sp|Q086E4|IBP1_SHEF... *
+>Cluster 1
+0	790aa, >sp|P24856|ANP_NOTNE... *
+>Cluster 2
+0	276aa, >sp|H7FWB6|IBP_FLAFP... *
+>Cluster 3
+0	261aa, >sp|C7F6X3|IBP_LEUSY... *
+>Cluster 4
+0	253aa, >sp|A5XB26|IBP_COLSX... *
+>Cluster 5
+0	243aa, >sp|Q76CE8|IBPKA_TYP... *
+>Cluster 6
+0	218aa, >sp|B1P0S1|ANPM_PSEA... *
+>Cluster 7
+0	175aa, >sp|Q01758|ISP2_OSMM... *
+>Cluster 8
+0	168aa, >sp|A0ZT93|ISP2_BRAS... *
+>Cluster 9
+0	163aa, >sp|P05140|ISP2_HEMA... *
+>Cluster 10
+0	63aa, >sp|P12101|ANP2_PACB... at 92.06%
+1	64aa, >sp|P12102|ANP2_LYCD... at 93.75%
+2	64aa, >sp|P35751|ANP1_LYCD... at 98.44%
+3	134aa, >sp|P35753|ANP3_LYCD... *
+>Cluster 11
+0	128aa, >sp|P80961|AFP4_MYOO... *
+>Cluster 12
+0	125aa, >sp|Q56TU0|AFP4_GADM... *
+>Cluster 13
+0	124aa, >sp|Q8JI37|AFP4_PARO... *
+>Cluster 14
+0	112aa, >sp|O16119|ANPY1_TEN... *
+>Cluster 15
+0	97aa, >sp|P09031|ANP_MYZFE... *
+>Cluster 16
+0	91aa, >sp|P07835|ANPX_PSEA... *
+1	91aa, >sp|P23699|ANPY_PSEA... at 98.90%
+>Cluster 17
+0	91aa, >sp|P19606|ANP3_ZOAA... *
+>Cluster 18
+0	88aa, >sp|P12416|ANP1_ANAL... *
+1	88aa, >sp|P12417|ANP2_ANAL... at 97.73%
+>Cluster 19
+0	87aa, >sp|P07457|ANP1C_ZOA... *
+1	87aa, >sp|P19604|ANPD_ZOAA... at 96.55%
+2	87aa, >sp|P19605|ANPE_ZOAA... at 91.95%
+3	87aa, >sp|P19607|ANP5_ZOAA... at 97.70%
+4	64aa, >sp|P19608|ANP1_ZOAA... at 93.75%
+5	63aa, >sp|P19609|ANP4_ZOAA... at 96.83%
+6	64aa, >sp|P19611|ANP7_ZOAA... at 92.19%
+7	64aa, >sp|P19612|ANP9_ZOAA... at 93.75%
+8	62aa, >sp|P19613|ANP11_ZOA... at 95.16%
+>Cluster 20
+0	85aa, >sp|P02734|ANP4_PSEA... *
+>Cluster 21
+0	82aa, >sp|P04002|ANPA_PSEA... *
+1	82aa, >sp|Q99013|ANPB_PSEA... at 93.90%
+>Cluster 22
+0	66aa, >sp|P19614|ANP12_ZOA... *
+>Cluster 23
+0	66aa, >sp|P24028|ANP1_LYCP... *
+>Cluster 24
+0	63aa, >sp|P12100|ANP1_PACB... *
+>Cluster 25
+0	45aa, >sp|P04368|ANP8_MYOS... *
+1	40aa, >sp|P20617|ANP8_MYOA... at 95.00%
+>Cluster 26
+0	37aa, >sp|P02733|ANP3_PSEA... *
+>Cluster 27
+0	33aa, >sp|P04367|ANP3_MYOS... *
+>Cluster 28
+0	33aa, >sp|P20421|ANP5_MYOA... *
+>Cluster 29
+0	31aa, >sp|P02732|ANP3_PAGB... *
+>Cluster 30
+0	20aa, >sp|P86268|ANTF_ANTP... *
+>Cluster 31
+0	19aa, >sp|P11920|ANP7_ELEG... *
+1	16aa, >sp|P11921|ANP8_ELEG... at 93.75%

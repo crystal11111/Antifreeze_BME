@@ -1,0 +1,8 @@
+Entry	Reviewed	Entry Name	Protein names	Gene Names	Organism	Length	Protein existence
+C7F6X3	reviewed	IBP_LEUSY	Ice-binding protein (Antifreeze protein) (AFP) (LeIBP)	AFP	Leucosporidium sp. (strain AY30) (Arctic yeast)	261	Evidence at protein level
+H7FWB6	reviewed	IBP_FLAFP	Ice-binding protein (Antifreeze protein) (AFP) (FfIBP)	HJ01_03463	Flavobacterium frigoris (strain PS1)	276	Evidence at protein level
+A5XB26	reviewed	IBP_COLSX	Ice-binding protein (Antifreeze protein) (AFP)		Colwellia sp	253	Evidence at protein level
+Q76CE8	reviewed	IBPKA_TYPIS	Ice-binding protein K1-A (Antifreeze protein 8) (AFP8) (TAFP-3) (TisAFP8)	K1-A	Typhula ishikariensis (Gray snow mold fungus)	243	Evidence at protein level
+O16119	reviewed	ANPY1_TENMO	Thermal hysteresis protein YL-1 (THP YL-1) (Beta-helix antifreeze protein 2-14) (THP 2-14)		Tenebrio molitor (Yellow mealworm beetle)	112	Evidence at protein level
+P86268	reviewed	ANTF_ANTPS	Antifreeze protein (AnpAFP)		Antarctomyces psychrotrophicus	20	Evidence at protein level
+Q086E4	reviewed	IBP1_SHEFN	Ice-binding protein 1 (Antifreeze protein 1) (AFP 1) (Ice adhesin 1)	Sfri_1018	Shewanella frigidimarina (strain NCIMB 400)	892	Evidence at protein level
