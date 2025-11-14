@@ -40,6 +40,10 @@ python plot_dnd.py
 ```bash
 python count_motifs.py
 ```
+### 5 training the HMM
+```bash
+python train_hmm.ipynb
+```
 
 ## Scripts
 
@@ -47,6 +51,8 @@ python count_motifs.py
 - **create_UPGMA.py**: Constructs UPGMA phylogenetic tree from alignment
 - **plot_dnd.py**: Visualizes ClustalW guide tree from .dnd file
 - **count_motifs.py**: Counts specific motifs (TxT, TxxT, TAA, TAP) in sequences
+- **train_hmm.ipynb**: used to train the positive and negative HMM 
+- **test_hmm.ipynb**: uses the models outputted by the HMM to predict 
 
 ## Requirements
 
@@ -55,3 +61,5 @@ python count_motifs.py
 - matplotlib
 - ClustalW2 (must be in PATH)
 - CD-HIT
+- hmmlearn
+- numpy
