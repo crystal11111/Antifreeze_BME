@@ -1,6 +1,24 @@
 # Antifreeze Protein Analysis Pipeline
 
-A bioinformatics pipeline for analyzing antifreeze proteins (AFPs) using multiple sequence alignment and phylogenetic analysis.
+A bioinformatics pipeline for analyzing antifreeze proteins (AFPs) using multiple sequence alignment, phylogenetic analysis, and machine learning.
+
+## Project Structure
+
+```
+Antifreeze_BME/
+├── data/
+│   ├── meta/          # UniProt metadata files
+│   ├── raw/           # Original FASTA files
+│   ├── positives/     # AFP sequences
+│   │   └── by_type/   # Type-specific AFP files
+│   └── negatives/     # Non-AFP sequences
+├── scripts/
+│   ├── data_processing/     # Data preparation scripts
+│   ├── sequence_analysis/   # MSA, phylogeny, motifs
+│   └── machine_learning/    # HMM training/testing
+├── model_results/       # HMM model outputs
+└── README.md
+```
 
 ## Data Sources
 
@@ -19,39 +37,49 @@ A bioinformatics pipeline for analyzing antifreeze proteins (AFPs) using multipl
 ### 1️⃣ Data Preparation
 ```bash
 # Split fish AFPs by type (Type1, Type2, Type3, Type4, AFGP)
-python split_afp_by_type.py
+python scripts/data_processing/split_afp_by_type.py
 
 # Process each AFP type (cd-hit clustering + MSA)
-python process_afp_types.py
+python scripts/data_processing/process_afp_types.py
 ```
 
 ### 2️⃣ Individual Type Analysis
 ```bash
 # For specific AFP types, use existing scripts:
-python conduct_MSA.py    # (modify input file path as needed)
-python create_UPGMA.py   # (modify input file path as needed)
-python plot_dnd.py       # (modify input file path as needed)
+python scripts/sequence_analysis/conduct_MSA.py    # (modify input file path as needed)
+python scripts/sequence_analysis/create_UPGMA.py   # (modify input file path as needed)
+python scripts/sequence_analysis/plot_dnd.py       # (modify input file path as needed)
 ```
 
 ### 3️⃣ Motif Analysis
 ```bash
-python count_motifs.py
+python scripts/sequence_analysis/count_motifs.py
 ```
-### 5 training the HMM
+
+### 4️⃣ Machine Learning
 ```bash
-python train_hmm.ipynb
+# Train HMM models
+jupyter notebook scripts/machine_learning/train_hmm.ipynb
+
+# Test HMM predictions
+jupyter notebook scripts/machine_learning/test_hmm.ipynb
 ```
 
 ## Scripts
 
+### Data Processing
 - **split_afp_by_type.py**: Splits fish AFPs into separate files by type (Type1, Type2, Type3, Type4, AFGP)
 - **process_afp_types.py**: Processes each AFP type through cd-hit clustering and MSA
+
+### Sequence Analysis
 - **conduct_MSA.py**: Performs multiple sequence alignment using ClustalW
 - **create_UPGMA.py**: Constructs UPGMA phylogenetic tree from alignment
 - **plot_dnd.py**: Visualizes ClustalW guide tree from .dnd file
 - **count_motifs.py**: Counts specific motifs (TxT, TxxT, TAA, TAP) in sequences
-- **train_hmm.ipynb**: used to train the positive and negative HMM 
-- **test_hmm.ipynb**: uses the models outputted by the HMM to predict 
+
+### Machine Learning
+- **train_hmm.ipynb**: Trains positive and negative HMM models
+- **test_hmm.ipynb**: Uses trained models for AFP prediction
 
 ## Requirements
 
@@ -59,7 +87,8 @@ python train_hmm.ipynb
 - Biopython
 - matplotlib
 - pandas
+- numpy
+- hmmlearn
 - ClustalW (must be in PATH)
 - CD-HIT
-- hmmlearn
-- numpy
+- Jupyter Notebook
