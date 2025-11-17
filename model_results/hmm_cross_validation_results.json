@@ -1,0 +1,997 @@
+{
+    "n_components_1": {
+        "n_components": 1,
+        "average_accuracy": 0.8875,
+        "std_accuracy": 0.1220911544707478,
+        "fold_accuracies": [
+            0.8,
+            0.6,
+            0.8,
+            0.9,
+            1.0,
+            0.9,
+            1.0,
+            1.0,
+            1.0,
+            0.875
+        ],
+        "fold_details": [
+            {
+                "fold": 1,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 2,
+                "positive_correct": 1,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.6
+            },
+            {
+                "fold": 3,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 4,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 5,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 6,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 7,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 8,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 9,
+                "positive_correct": 4,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 10,
+                "positive_correct": 3,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 0.875
+            }
+        ]
+    },
+    "n_components_2": {
+        "n_components": 2,
+        "average_accuracy": 0.8975,
+        "std_accuracy": 0.07782191208136689,
+        "fold_accuracies": [
+            0.8,
+            0.8,
+            0.8,
+            0.9,
+            1.0,
+            0.9,
+            1.0,
+            0.9,
+            1.0,
+            0.875
+        ],
+        "fold_details": [
+            {
+                "fold": 1,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 2,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 3,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 4,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 5,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 6,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 7,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 8,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 9,
+                "positive_correct": 4,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 10,
+                "positive_correct": 3,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 0.875
+            }
+        ]
+    },
+    "n_components_3": {
+        "n_components": 3,
+        "average_accuracy": 0.9175000000000001,
+        "std_accuracy": 0.07586995452746757,
+        "fold_accuracies": [
+            0.9,
+            0.9,
+            0.8,
+            0.9,
+            1.0,
+            0.8,
+            1.0,
+            1.0,
+            1.0,
+            0.875
+        ],
+        "fold_details": [
+            {
+                "fold": 1,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 2,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 3,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 4,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 5,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 6,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 7,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 8,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 9,
+                "positive_correct": 4,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 10,
+                "positive_correct": 3,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 0.875
+            }
+        ]
+    },
+    "n_components_4": {
+        "n_components": 4,
+        "average_accuracy": 0.85,
+        "std_accuracy": 0.0894427190999916,
+        "fold_accuracies": [
+            0.8,
+            0.9,
+            0.7,
+            0.9,
+            0.9,
+            0.9,
+            1.0,
+            0.9,
+            0.75,
+            0.75
+        ],
+        "fold_details": [
+            {
+                "fold": 1,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 2,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 3,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.7
+            },
+            {
+                "fold": 4,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 5,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 6,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 7,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 8,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 9,
+                "positive_correct": 4,
+                "positive_total": 4,
+                "negative_correct": 2,
+                "negative_total": 4,
+                "accuracy": 0.75
+            },
+            {
+                "fold": 10,
+                "positive_correct": 3,
+                "positive_total": 4,
+                "negative_correct": 3,
+                "negative_total": 4,
+                "accuracy": 0.75
+            }
+        ]
+    },
+    "n_components_5": {
+        "n_components": 5,
+        "average_accuracy": 0.8925000000000001,
+        "std_accuracy": 0.0725,
+        "fold_accuracies": [
+            0.9,
+            0.9,
+            0.8,
+            0.9,
+            0.9,
+            0.9,
+            1.0,
+            1.0,
+            0.875,
+            0.75
+        ],
+        "fold_details": [
+            {
+                "fold": 1,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 2,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 3,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 4,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 5,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 6,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 7,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 8,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 9,
+                "positive_correct": 4,
+                "positive_total": 4,
+                "negative_correct": 3,
+                "negative_total": 4,
+                "accuracy": 0.875
+            },
+            {
+                "fold": 10,
+                "positive_correct": 3,
+                "positive_total": 4,
+                "negative_correct": 3,
+                "negative_total": 4,
+                "accuracy": 0.75
+            }
+        ]
+    },
+    "n_components_6": {
+        "n_components": 6,
+        "average_accuracy": 0.9275,
+        "std_accuracy": 0.06562202374203344,
+        "fold_accuracies": [
+            0.9,
+            0.9,
+            0.8,
+            0.9,
+            1.0,
+            0.9,
+            1.0,
+            1.0,
+            1.0,
+            0.875
+        ],
+        "fold_details": [
+            {
+                "fold": 1,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 2,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 3,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 4,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 5,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 6,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 7,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 8,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 9,
+                "positive_correct": 4,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 10,
+                "positive_correct": 3,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 0.875
+            }
+        ]
+    },
+    "n_components_7": {
+        "n_components": 7,
+        "average_accuracy": 0.8850000000000001,
+        "std_accuracy": 0.06999999999999999,
+        "fold_accuracies": [
+            0.9,
+            0.9,
+            0.8,
+            0.8,
+            0.9,
+            0.8,
+            1.0,
+            1.0,
+            0.875,
+            0.875
+        ],
+        "fold_details": [
+            {
+                "fold": 1,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 2,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 3,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 4,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 5,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 6,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 7,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 8,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 9,
+                "positive_correct": 4,
+                "positive_total": 4,
+                "negative_correct": 3,
+                "negative_total": 4,
+                "accuracy": 0.875
+            },
+            {
+                "fold": 10,
+                "positive_correct": 3,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 0.875
+            }
+        ]
+    },
+    "n_components_8": {
+        "n_components": 8,
+        "average_accuracy": 0.9075,
+        "std_accuracy": 0.09490126448051153,
+        "fold_accuracies": [
+            0.8,
+            0.9,
+            0.7,
+            0.9,
+            0.9,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.875
+        ],
+        "fold_details": [
+            {
+                "fold": 1,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 2,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 3,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.7
+            },
+            {
+                "fold": 4,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 5,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 6,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 7,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 8,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 9,
+                "positive_correct": 4,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 10,
+                "positive_correct": 3,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 0.875
+            }
+        ]
+    },
+    "n_components_9": {
+        "n_components": 9,
+        "average_accuracy": 0.9175000000000001,
+        "std_accuracy": 0.0612882533606563,
+        "fold_accuracies": [
+            0.9,
+            0.9,
+            0.8,
+            0.9,
+            1.0,
+            0.9,
+            1.0,
+            0.9,
+            1.0,
+            0.875
+        ],
+        "fold_details": [
+            {
+                "fold": 1,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 2,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 3,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.8
+            },
+            {
+                "fold": 4,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 5,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 6,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 7,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 8,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 9,
+                "positive_correct": 4,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 10,
+                "positive_correct": 3,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 0.875
+            }
+        ]
+    },
+    "n_components_10": {
+        "n_components": 10,
+        "average_accuracy": 0.8850000000000001,
+        "std_accuracy": 0.08958236433584459,
+        "fold_accuracies": [
+            0.9,
+            0.9,
+            0.7,
+            0.9,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            1.0,
+            0.75
+        ],
+        "fold_details": [
+            {
+                "fold": 1,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 2,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 3,
+                "positive_correct": 3,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.7
+            },
+            {
+                "fold": 4,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 5,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 6,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 7,
+                "positive_correct": 4,
+                "positive_total": 5,
+                "negative_correct": 5,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 8,
+                "positive_correct": 5,
+                "positive_total": 5,
+                "negative_correct": 4,
+                "negative_total": 5,
+                "accuracy": 0.9
+            },
+            {
+                "fold": 9,
+                "positive_correct": 4,
+                "positive_total": 4,
+                "negative_correct": 4,
+                "negative_total": 4,
+                "accuracy": 1.0
+            },
+            {
+                "fold": 10,
+                "positive_correct": 3,
+                "positive_total": 4,
+                "negative_correct": 3,
+                "negative_total": 4,
+                "accuracy": 0.75
+            }
+        ]
+    },
+    "summary": {
+        "best_n_components": 6,
+        "best_average_accuracy": 0.9275,
+        "best_std_accuracy": 0.06562202374203344
+    }
+}
