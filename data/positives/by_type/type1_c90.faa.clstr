@@ -1,0 +1,42 @@
+>Cluster 0
+0	218aa, >sp|B1P0S1|ANPM_PSEA... *
+>Cluster 1
+0	63aa, >sp|P12101|ANP2_PACB... at 92.06%
+1	64aa, >sp|P12102|ANP2_LYCD... at 93.75%
+2	64aa, >sp|P35751|ANP1_LYCD... at 98.44%
+3	134aa, >sp|P35753|ANP3_LYCD... *
+>Cluster 2
+0	97aa, >sp|P09031|ANP_MYZFE... *
+>Cluster 3
+0	91aa, >sp|P07835|ANPX_PSEA... *
+1	91aa, >sp|P23699|ANPY_PSEA... at 98.90%
+>Cluster 4
+0	91aa, >sp|P19606|ANP3_ZOAA... *
+>Cluster 5
+0	87aa, >sp|P07457|ANP1C_ZOA... *
+1	87aa, >sp|P19604|ANPD_ZOAA... at 96.55%
+2	87aa, >sp|P19605|ANPE_ZOAA... at 91.95%
+3	87aa, >sp|P19607|ANP5_ZOAA... at 97.70%
+4	64aa, >sp|P19608|ANP1_ZOAA... at 93.75%
+5	63aa, >sp|P19609|ANP4_ZOAA... at 96.83%
+6	64aa, >sp|P19611|ANP7_ZOAA... at 92.19%
+7	64aa, >sp|P19612|ANP9_ZOAA... at 93.75%
+8	62aa, >sp|P19613|ANP11_ZOA... at 95.16%
+>Cluster 6
+0	85aa, >sp|P02734|ANP4_PSEA... *
+>Cluster 7
+0	82aa, >sp|P04002|ANPA_PSEA... *
+1	82aa, >sp|Q99013|ANPB_PSEA... at 93.90%
+>Cluster 8
+0	66aa, >sp|P24028|ANP1_LYCP... *
+>Cluster 9
+0	63aa, >sp|P12100|ANP1_PACB... *
+>Cluster 10
+0	45aa, >sp|P04368|ANP8_MYOS... *
+1	40aa, >sp|P20617|ANP8_MYOA... at 95.00%
+>Cluster 11
+0	37aa, >sp|P02733|ANP3_PSEA... *
+>Cluster 12
+0	33aa, >sp|P04367|ANP3_MYOS... *
+>Cluster 13
+0	33aa, >sp|P20421|ANP5_MYOA... *

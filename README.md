@@ -18,25 +18,22 @@ A bioinformatics pipeline for analyzing antifreeze proteins (AFPs) using multipl
 
 ### 1️⃣ Data Preparation
 ```bash
-# Combine AFP sequences
-cat data/raw/uniprotkb_fishAFP.fasta data/raw/uniprotkb_nonfishAFP.fasta > data/positives/afp_all_raw.faa
+# Split fish AFPs by type (Type1, Type2, Type3, Type4, AFGP)
+python split_afp_by_type.py
 
-# Remove redundancy (90% identity clustering)
-cd-hit -i data/positives/afp_all_raw.faa -o data/positives/afp_all_c90.faa -c 0.90 -n 5
+# Process each AFP type (cd-hit clustering + MSA)
+python process_afp_types.py
 ```
 
-### 2️⃣ Multiple Sequence Alignment
+### 2️⃣ Individual Type Analysis
 ```bash
-python conduct_MSA.py
+# For specific AFP types, use existing scripts:
+python conduct_MSA.py    # (modify input file path as needed)
+python create_UPGMA.py   # (modify input file path as needed)
+python plot_dnd.py       # (modify input file path as needed)
 ```
 
-### 3️⃣ Phylogenetic Analysis
-```bash
-python create_UPGMA.py
-python plot_dnd.py
-```
-
-### 4️⃣ Motif Analysis
+### 3️⃣ Motif Analysis
 ```bash
 python count_motifs.py
 ```
@@ -47,7 +44,9 @@ python train_hmm.ipynb
 
 ## Scripts
 
-- **conduct_MSA.py**: Performs multiple sequence alignment using ClustalW2
+- **split_afp_by_type.py**: Splits fish AFPs into separate files by type (Type1, Type2, Type3, Type4, AFGP)
+- **process_afp_types.py**: Processes each AFP type through cd-hit clustering and MSA
+- **conduct_MSA.py**: Performs multiple sequence alignment using ClustalW
 - **create_UPGMA.py**: Constructs UPGMA phylogenetic tree from alignment
 - **plot_dnd.py**: Visualizes ClustalW guide tree from .dnd file
 - **count_motifs.py**: Counts specific motifs (TxT, TxxT, TAA, TAP) in sequences
@@ -59,7 +58,8 @@ python train_hmm.ipynb
 - Python 3.x
 - Biopython
 - matplotlib
-- ClustalW2 (must be in PATH)
+- pandas
+- ClustalW (must be in PATH)
 - CD-HIT
 - hmmlearn
 - numpy

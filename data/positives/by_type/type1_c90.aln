@@ -1,0 +1,82 @@
+CLUSTAL 2.1 multiple sequence alignment
+
+
+sp|P04002|ANPA_PSEAM       MALSLFTVGQLIFLFWTMRITEASPDPAAKAAPAAAAAP--------AAA
+sp|P02733|ANP3_PSEAM       --------------------------------------------------
+sp|P02734|ANP4_PSEAM       -----------------MRITEANPDPDAKAVPAAAAPST---ASDAAAA
+sp|P07835|ANPX_PSEAM       MALSLFTVGQLIFLFWTMRITEANPDPAAKAVPAAAAPDT---ASDAAAA
+sp|P09031|ANP_MYZFE        MALSLFTVGQLIFLFWTLRITEANPDPAAKAAPAAVADP----AAAAAAA
+sp|B1P0S1|ANPM_PSEAM       MALSLFTVGQFIFLFWTISITEANIDPAARAAAAAAASKAAVTAADAAAA
+sp|P04367|ANP3_MYOSC       --------------------------------------------------
+sp|P20421|ANP5_MYOAE       --------------------------------------------------
+sp|P04368|ANP8_MYOSC       ---------------------MNGETPAQKAAR-----------------
+sp|P07457|ANP1C_ZOAAM      MKSVILTGLLFVLLCVDHMT-ASQSVVATQLIPINTALT--------PAM
+sp|P19606|ANP3_ZOAAM       MKSVILTGLLFVLLCVDHMSSANQSVVATQLIPINTALT--------LVM
+sp|P24028|ANP1_LYCPO       ---------------------NKASVVANQLIPINTALT--------LVM
+sp|P35753|ANP3_LYCDA       ---------------------NKASVVANQLIPINTALT--------LIM
+sp|P12100|ANP1_PACBR       ----------------------TKSVVASQLIPINTALT--------PAM
+                                                                             
+
+sp|P04002|ANPA_PSEAM       APDTASDAAAAAALTAAN------------------AKAAAELTAANAAA
+sp|P02733|ANP3_PSEAM       --DTASDAAAAAALTAAB------------------AAAAAKLTABBAAA
+sp|P02734|ANP4_PSEAM       AAATAATAAAAAAATAATAAAAAAATA-------ATAAKAAALTAANAAA
+sp|P07835|ANPX_PSEAM       AAATAATAAAAAAATAAT------------------AAKAAALTAANAAA
+sp|P09031|ANP_MYZFE        VADTASDAAAAAAATAAAAAKAAAD-----------TAAAAAKAAADTAA
+sp|B1P0S1|ANPM_PSEAM       AATIAASAASVAAATAADDAAASIATINAASAAAKSIAAAAAMAAKDTAA
+sp|P04367|ANP3_MYOSC       ----MNAPARAAAKTAAD------------------ALAAAKKTAADAAA
+sp|P20421|ANP5_MYOAE       ----MDAPAIAAAKTAAD------------------ALAAAKKTAADAAA
+sp|P04368|ANP8_MYOSC       ----LAAAAALAAKTAAD---------------------AAAKAAAKAAA
+sp|P07457|ANP1C_ZOAAM      MEGKVTNPIGIPFAEMSQ-----------------IVGKQVNTPVAKGQT
+sp|P19606|ANP3_ZOAAM       MTTRVIYPTGIPAEDIPR-----------------LVSMQVNQAVPMGTT
+sp|P24028|ANP1_LYCPO       MRAEVVTPAGIPAEDIPR-----------------LVGLQVNRAVLIGTT
+sp|P35753|ANP3_LYCDA       MKAEVVTPMGIPAEEIPN-----------------LVGMQVNRAVPLGTT
+sp|P12100|ANP1_PACBR       MKAKEVSPKGIPAEEMSK-----------------IVGMQVNRAVNLDET
+                                  .   .    .                       .  ..    :
+
+sp|P04002|ANPA_PSEAM       AAAATARG------------------------------------------
+sp|P02733|ANP3_PSEAM       AAAATAA-------------------------------------------
+sp|P02734|ANP4_PSEAM       AAAATAAAAARG--------------------------------------
+sp|P07835|ANPX_PSEAM       AAAATAAAAARG--------------------------------------
+sp|P09031|ANP_MYZFE        AAAEAAAATARG--------------------------------------
+sp|B1P0S1|ANPM_PSEAM       AAASAAAAAVASAAKALETINVKAAYAAATTANTAAAAAAATATTAAAAA
+sp|P04367|ANP3_MYOSC       AAAAA---------------------------------------------
+sp|P20421|ANP5_MYOAE       AAAKP---------------------------------------------
+sp|P04368|ANP8_MYOSC       IAAAAASA------------------------------------------
+sp|P07457|ANP1C_ZOAAM      LMPNMVKTY--VAGK-----------------------------------
+sp|P19606|ANP3_ZOAAM       LMPDMVKFYCLCAPKN----------------------------------
+sp|P24028|ANP1_LYCPO       LMPDMVKGYAPQ--------------------------------------
+sp|P35753|ANP3_LYCDA       LMPDMVKNYEDGTTSPGLKSVVANQLIPINTALTLVMMKAEEVSPKGIPS
+sp|P12100|ANP1_PACBR       LMPDMVKTYQ----------------------------------------
+                             .                                               
+
+sp|P04002|ANPA_PSEAM       --------------------------------------------------
+sp|P02733|ANP3_PSEAM       --------------------------------------------------
+sp|P02734|ANP4_PSEAM       --------------------------------------------------
+sp|P07835|ANPX_PSEAM       --------------------------------------------------
+sp|P09031|ANP_MYZFE        --------------------------------------------------
+sp|B1P0S1|ANPM_PSEAM       AAKATIDNAAAAKAAAVATAVSDAAATAATAAAVAAATLEAAAAKAAATA
+sp|P04367|ANP3_MYOSC       --------------------------------------------------
+sp|P20421|ANP5_MYOAE       --------------------------------------------------
+sp|P04368|ANP8_MYOSC       --------------------------------------------------
+sp|P07457|ANP1C_ZOAAM      --------------------------------------------------
+sp|P19606|ANP3_ZOAAM       --------------------------------------------------
+sp|P24028|ANP1_LYCPO       --------------------------------------------------
+sp|P35753|ANP3_LYCDA       EEISKLVGMQVNRAVYLDQTLMPDMVKNYE--------------------
+sp|P12100|ANP1_PACBR       --------------------------------------------------
+                                                                             
+
+sp|P04002|ANPA_PSEAM       ------------------
+sp|P02733|ANP3_PSEAM       ------------------
+sp|P02734|ANP4_PSEAM       ------------------
+sp|P07835|ANPX_PSEAM       ------------------
+sp|P09031|ANP_MYZFE        ------------------
+sp|B1P0S1|ANPM_PSEAM       VSAAAAAAAAAIAFAAAP
+sp|P04367|ANP3_MYOSC       ------------------
+sp|P20421|ANP5_MYOAE       ------------------
+sp|P04368|ANP8_MYOSC       ------------------
+sp|P07457|ANP1C_ZOAAM      ------------------
+sp|P19606|ANP3_ZOAAM       ------------------
+sp|P24028|ANP1_LYCPO       ------------------
+sp|P35753|ANP3_LYCDA       ------------------
+sp|P12100|ANP1_PACBR       ------------------
+                                             
