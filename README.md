@@ -65,6 +65,12 @@ jupyter notebook scripts/machine_learning/train_hmm.ipynb
 jupyter notebook scripts/machine_learning/test_hmm.ipynb
 ```
 
+### 5️⃣ Sequence properties (Hydrophobicity/Steric Hindrance)
+```bash
+# To extract features from a protein sequence (unaligned)
+# Currently does not do anything other than PoC
+python scripts/sequence_analysis/extract_features.py
+```
 ## Scripts
 
 ### Data Processing
@@ -76,6 +82,7 @@ jupyter notebook scripts/machine_learning/test_hmm.ipynb
 - **create_UPGMA.py**: Constructs UPGMA phylogenetic tree from alignment
 - **plot_dnd.py**: Visualizes ClustalW guide tree from .dnd file
 - **count_motifs.py**: Counts specific motifs (TxT, TxxT, TAA, TAP) in sequences
+- **extract_features.py**: Calculates sequence hydrophobicity and steric hindrance
 
 ### Machine Learning
 - **train_hmm.ipynb**: Trains positive and negative HMM models
