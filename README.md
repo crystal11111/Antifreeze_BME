@@ -53,7 +53,11 @@ python scripts/sequence_analysis/plot_dnd.py       # (modify input file path as 
 
 ### 3️⃣ Motif Analysis
 ```bash
+# Counts motifs found in research papers
 python scripts/sequence_analysis/count_motifs.py
+
+# Extracts common motifs from our sequences
+python scripts/sequence_analysis/common_motifs.py
 ```
 
 ### 4️⃣ Machine Learning
@@ -71,6 +75,8 @@ jupyter notebook scripts/machine_learning/test_hmm.ipynb
 # Currently does not do anything other than PoC
 python scripts/sequence_analysis/extract_features.py
 ```
+
+
 ## Scripts
 
 ### Data Processing
