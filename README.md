@@ -7,6 +7,7 @@ A bioinformatics pipeline for analyzing antifreeze proteins (AFPs) using multipl
 ```
 Antifreeze_BME/
 ├── data/
+│   ├── motifs/        # Common motifs from our data
 │   ├── meta/          # UniProt metadata files
 │   ├── raw/           # Original FASTA files
 │   ├── positives/     # AFP sequences
@@ -53,7 +54,11 @@ python scripts/sequence_analysis/plot_dnd.py       # (modify input file path as 
 
 ### 3️⃣ Motif Analysis
 ```bash
+# Counts motifs found in research papers
 python scripts/sequence_analysis/count_motifs.py
+
+# Extracts common motifs from our sequences
+python scripts/sequence_analysis/common_motifs.py
 ```
 
 ### 4️⃣ Machine Learning
@@ -64,6 +69,14 @@ jupyter notebook scripts/machine_learning/train_hmm.ipynb
 # Test HMM predictions
 jupyter notebook scripts/machine_learning/test_hmm.ipynb
 ```
+
+### 5️⃣ Sequence properties (Hydrophobicity/Steric Hindrance)
+```bash
+# To extract features from a protein sequence (unaligned)
+# Currently does not do anything other than PoC
+python scripts/sequence_analysis/extract_features.py
+```
+
 
 ## Scripts
 
@@ -76,6 +89,8 @@ jupyter notebook scripts/machine_learning/test_hmm.ipynb
 - **create_UPGMA.py**: Constructs UPGMA phylogenetic tree from alignment
 - **plot_dnd.py**: Visualizes ClustalW guide tree from .dnd file
 - **count_motifs.py**: Counts specific motifs (TxT, TxxT, TAA, TAP) in sequences
+- **extract_features.py**: Calculates sequence hydrophobicity and steric hindrance
+- **common_motifs.py**: Gets common motifs from an .aln file 
 
 ### Machine Learning
 - **train_hmm.ipynb**: Trains positive and negative HMM models
