@@ -7,6 +7,7 @@ A bioinformatics pipeline for analyzing antifreeze proteins (AFPs) using multipl
 ```
 Antifreeze_BME/
 ├── data/
+│   ├── motifs/        # Common motifs from our data
 │   ├── meta/          # UniProt metadata files
 │   ├── raw/           # Original FASTA files
 │   ├── positives/     # AFP sequences
@@ -89,6 +90,7 @@ python scripts/sequence_analysis/extract_features.py
 - **plot_dnd.py**: Visualizes ClustalW guide tree from .dnd file
 - **count_motifs.py**: Counts specific motifs (TxT, TxxT, TAA, TAP) in sequences
 - **extract_features.py**: Calculates sequence hydrophobicity and steric hindrance
+- **common_motifs.py**: Gets common motifs from an .aln file 
 
 ### Machine Learning
 - **train_hmm.ipynb**: Trains positive and negative HMM models
