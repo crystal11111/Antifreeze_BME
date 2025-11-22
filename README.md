@@ -77,22 +77,33 @@ jupyter notebook scripts/machine_learning/test_hmm.ipynb
 
 ### 5️⃣ Feature Extraction
 ```bash
-# Extract MSA-based features (conservation, consensus identity)
-python scripts/feature_extraction/extract_msa_features.py
-
-# Extract phylogenetic tree features (branch lengths, distances)
+# Main classifier features (for AFP detection)
+python scripts/feature_extraction/extract_afp_distance_features.py
 python scripts/feature_extraction/extract_tree_features.py
-
-# Basic sequence properties (hydrophobicity/steric hindrance)
-python scripts/sequence_analysis/extract_features.py
 ```
 
+## Feature Datasets
+
+### For AFP Detection (Classification)
+**Primary features** - Use these for training AFP vs non-AFP classifiers:
+
+1. **afp_distance_features.csv** (4,738 sequences × 53 features)
+   - Aligns all sequences against AFP type profiles
+   - 8 basic properties: length, charge, amino acid composition
+   - 35 per-type features: alignment score, identity, coverage, gap rate, conservation match (7 metrics × 5 types)
+   - 7 discriminators: top1/top2 type, identity, score, coverage, delta
+   - 3 quality flags: alignment_failed, low_coverage, ambiguous_rate
+
+2. **medoid_tree_features.csv** (4,738 sequences × ~25 features)
+   - Aligns all sequences to medoid (representative) of each AFP type
+   - Per-type: score, identity, coverage, gap rate
+   - Top medoid matches and deltas
 
 ## Scripts
 
 ### Data Processing
-- **split_afp_by_type.py**: Splits fish AFPs into separate files by type (Type1, Type2, Type3, Type4, AFGP)
-- **process_afp_types.py**: Processes each AFP type through cd-hit clustering and MSA
+- **split_afp_by_type.py**: Splits fish AFPs by type (Type1, Type2, Type3, Type4, AFGP)
+- **process_afp_types.py**: cd-hit clustering + MSA for each AFP type
 
 ### Sequence Analysis
 - **conduct_MSA.py**: Performs multiple sequence alignment using ClustalW
@@ -100,12 +111,13 @@ python scripts/sequence_analysis/extract_features.py
 - **create_UPGMA_by_type.py**: Generates UPGMA trees for all AFP types
 - **plot_dnd.py**: Visualizes ClustalW guide tree from .dnd file
 - **count_motifs.py**: Counts specific motifs (TxT, TxxT, TAA, TAP) in sequences
-- **extract_features.py**: Calculates sequence hydrophobicity and steric hindrance
-- **common_motifs.py**: Gets common motifs from an .aln file
+- **common_motifs.py**: Extracts common motifs from alignments
 
 ### Feature Extraction
-- **extract_msa_features.py**: Extracts MSA-based features (conservation scores, consensus identity)
-- **extract_tree_features.py**: Extracts phylogenetic tree features (branch lengths, distances) 
+- **extract_afp_distance_features.py**: Per-type alignment features for all sequences
+- **extract_tree_features.py**: Medoid-based phylogenetic distance features
+- **medoid_tools.py**: Identifies medoid sequences from UPGMA trees
+- **extract_msa_features.py**: Within-type conservation features (AFP-only)
 
 ### Machine Learning
 - **train_hmm.ipynb**: Trains positive and negative HMM models
@@ -115,10 +127,28 @@ python scripts/sequence_analysis/extract_features.py
 
 - Python 3.x
 - Biopython
-- matplotlib
-- pandas
-- numpy
+- matplotlib, pandas, numpy
 - hmmlearn
 - ClustalW (must be in PATH)
 - CD-HIT
 - Jupyter Notebook
+
+## Quick Start for ML
+
+```bash
+# 1. Extract features
+python scripts/feature_extraction/extract_afp_distance_features.py
+python scripts/feature_extraction/extract_tree_features.py
+
+# 2. Load features for training
+import pandas as pd
+df_dist = pd.read_csv('data/features/afp_distance_features.csv')
+df_tree = pd.read_csv('data/features/medoid_tree_features.csv')
+
+# 3. Merge on sequence_id
+df = df_dist.merge(df_tree, on=['sequence_id', 'label'])
+
+# 4. Train your classifier
+X = df.drop(['sequence_id', 'label'], axis=1)
+y = (df['label'] == 'AFP').astype(int)
+```
