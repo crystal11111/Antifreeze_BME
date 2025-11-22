@@ -7,6 +7,7 @@ A bioinformatics pipeline for analyzing antifreeze proteins (AFPs) using multipl
 ```
 Antifreeze_BME/
 ├── data/
+│   ├── features/      # Extracted features for ML
 │   ├── motifs/        # Common motifs from our data
 │   ├── meta/          # UniProt metadata files
 │   ├── raw/           # Original FASTA files
@@ -16,6 +17,7 @@ Antifreeze_BME/
 ├── scripts/
 │   ├── data_processing/     # Data preparation scripts
 │   ├── sequence_analysis/   # MSA, phylogeny, motifs
+│   ├── feature_extraction/  # Feature extraction tools
 │   └── machine_learning/    # HMM training/testing
 ├── model_results/       # HMM model outputs
 └── README.md
@@ -44,12 +46,15 @@ python scripts/data_processing/split_afp_by_type.py
 python scripts/data_processing/process_afp_types.py
 ```
 
-### 2️⃣ Individual Type Analysis
+### 2️⃣ Phylogenetic Analysis
 ```bash
-# For specific AFP types, use existing scripts:
-python scripts/sequence_analysis/conduct_MSA.py    # (modify input file path as needed)
-python scripts/sequence_analysis/create_UPGMA.py   # (modify input file path as needed)
-python scripts/sequence_analysis/plot_dnd.py       # (modify input file path as needed)
+# Generate UPGMA trees for all AFP types
+python scripts/sequence_analysis/create_UPGMA_by_type.py
+
+# For individual types (modify input file path as needed):
+python scripts/sequence_analysis/conduct_MSA.py
+python scripts/sequence_analysis/create_UPGMA.py
+python scripts/sequence_analysis/plot_dnd.py
 ```
 
 ### 3️⃣ Motif Analysis
@@ -70,10 +75,15 @@ jupyter notebook scripts/machine_learning/train_hmm.ipynb
 jupyter notebook scripts/machine_learning/test_hmm.ipynb
 ```
 
-### 5️⃣ Sequence properties (Hydrophobicity/Steric Hindrance)
+### 5️⃣ Feature Extraction
 ```bash
-# To extract features from a protein sequence (unaligned)
-# Currently does not do anything other than PoC
+# Extract MSA-based features (conservation, consensus identity)
+python scripts/feature_extraction/extract_msa_features.py
+
+# Extract phylogenetic tree features (branch lengths, distances)
+python scripts/feature_extraction/extract_tree_features.py
+
+# Basic sequence properties (hydrophobicity/steric hindrance)
 python scripts/sequence_analysis/extract_features.py
 ```
 
@@ -87,10 +97,15 @@ python scripts/sequence_analysis/extract_features.py
 ### Sequence Analysis
 - **conduct_MSA.py**: Performs multiple sequence alignment using ClustalW
 - **create_UPGMA.py**: Constructs UPGMA phylogenetic tree from alignment
+- **create_UPGMA_by_type.py**: Generates UPGMA trees for all AFP types
 - **plot_dnd.py**: Visualizes ClustalW guide tree from .dnd file
 - **count_motifs.py**: Counts specific motifs (TxT, TxxT, TAA, TAP) in sequences
 - **extract_features.py**: Calculates sequence hydrophobicity and steric hindrance
-- **common_motifs.py**: Gets common motifs from an .aln file 
+- **common_motifs.py**: Gets common motifs from an .aln file
+
+### Feature Extraction
+- **extract_msa_features.py**: Extracts MSA-based features (conservation scores, consensus identity)
+- **extract_tree_features.py**: Extracts phylogenetic tree features (branch lengths, distances) 
 
 ### Machine Learning
 - **train_hmm.ipynb**: Trains positive and negative HMM models
