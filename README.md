@@ -18,7 +18,7 @@ Antifreeze_BME/
 │   ├── data_processing/     # Data preparation scripts
 │   ├── sequence_analysis/   # MSA, phylogeny, motifs
 │   ├── feature_extraction/  # Feature extraction tools
-│   └── machine_learning/    # HMM training/testing
+│   └── machine_learning/    # HMM and classification model
 ├── model_results/       # HMM model outputs
 └── README.md
 ```
@@ -131,7 +131,7 @@ python scripts/feature_extraction/extract_tree_features.py
 
 ### Machine Learning
 - **train_hmm.ipynb**: Trains positive and negative HMM models
-- **test_hmm.ipynb**: Uses trained models for AFP prediction
+- **classification.ipynb**: Is our classification model for AFP versus non-AFP
 
 ## Requirements
 
@@ -142,6 +142,7 @@ python scripts/feature_extraction/extract_tree_features.py
 - ClustalW (must be in PATH)
 - CD-HIT
 - Jupyter Notebook
+- sklearn
 
 ## Quick Start for ML
 
