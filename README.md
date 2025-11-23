@@ -35,6 +35,10 @@ Antifreeze_BME/
 - **uniprotkb_allAFP.tsv**: All antifreeze proteins
   - Query: `reviewed:true AND keyword:KW-0047`
 
+### PBlast Datasets
+- **pblast_non_reviewed/**: Fish AFP hits when given existing reviewed AFP sequences, many are non-reviewed 
+  - First sequence appearing in each file is the queried sequence
+
 ## Workflow
 
 ### 1️⃣ Data Preparation
@@ -44,6 +48,12 @@ python scripts/data_processing/split_afp_by_type.py
 
 # Process each AFP type (cd-hit clustering + MSA)
 python scripts/data_processing/process_afp_types.py
+
+# Cleans the PBLAST data (removes reviewed sequences, hypotheticals, partials)
+python scripts/data_processing/clean_pblast_data.py
+
+# Process the cleaned PBLAST AFPs (cd-hit clustering + MSA)
+python scripts/data_processing/process_pblast_data.py
 ```
 
 ### 2️⃣ Phylogenetic Analysis
