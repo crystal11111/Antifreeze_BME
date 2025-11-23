@@ -43,9 +43,13 @@ def align_to_medoid(seq, medoid_seq, aligner):
         'gap_rate': gaps / max(1, aligned_len + gaps)
     }
 
-def extract_medoid_features(sequence, seq_id, medoid_info, label):
+def extract_medoid_features(sequence, seq_id, medoid_info, label, afp_type=None, reviewed=False):
     """Extract medoid-based tree features for any sequence."""
-    features = {'sequence_id': seq_id, 'label': label}
+    features = {'sequence_id': seq_id, 'label': label, 'reviewed': int(reviewed)}
+    if afp_type:
+        features['afp_type'] = afp_type
+    else:
+        features['afp_type'] = 'N/A'
     
     aligner = PairwiseAligner()
     aligner.mode = 'global'
@@ -98,14 +102,34 @@ def main():
     
     all_features = []
     
-    # Process AFP sequences
-    print("\nProcessing AFP sequences...")
-    for record in SeqIO.parse("data/positives/afp_all_c90.faa", "fasta"):
-        seq_id = record.id.split('|')[1] if '|' in record.id else record.id
-        features = extract_medoid_features(str(record.seq), seq_id, medoid_info, 'AFP')
-        all_features.append(features)
-    print(f"  Processed {len([f for f in all_features if f['label'] == 'AFP'])} AFP sequences")
+    # Process reviewed AFP sequences
+    print("\nProcessing Reviewed AFP sequences...")
+    for afp_type in afp_types:
+        aln_file = f"data/positives/by_type/{afp_type}_c90.faa"
+        if not os.path.exists(aln_file):
+            print(f"Warning: {aln_file} not found, skipping")
+            continue
+        for record in SeqIO.parse(aln_file, "fasta"):
+            seq_id = record.id.split('|')[1] if '|' in record.id else record.id
+            features = extract_medoid_features(str(record.seq), seq_id, medoid_info, 'AFP', afp_type=afp_type, reviewed=True)
+            all_features.append(features)
+
+    print(f"  Processed {len([f for f in all_features if f['label'] == 'AFP'])} Reviewed AFP sequences")
     
+    # Process non-reviewed AFP sequences
+    print("\nProcessing Reviewed AFP sequences...")
+    for afp_type in afp_types:
+        aln_file = f"data/positives/pblast_filtered/pblast_{afp_type}_c90.faa"
+        if not os.path.exists(aln_file):
+            print(f"Warning: {aln_file} not found, skipping")
+            continue
+        for record in SeqIO.parse(aln_file, "fasta"):
+            seq_id = record.id.split('|')[1] if '|' in record.id else record.id
+            features = extract_medoid_features(str(record.seq), seq_id, medoid_info, 'AFP', afp_type=afp_type, reviewed=False)
+            all_features.append(features)
+
+    print(f"  Processed {len([f for f in all_features if f['label'] == 'AFP'])} Non-Reviewed AFP sequences")
+
     # Process non-AFP sequences
     print("Processing non-AFP sequences...")
     sequences = list(SeqIO.parse("data/negatives/non_afp_c90.faa", "fasta"))
@@ -113,7 +137,7 @@ def main():
         if i % 500 == 0:
             print(f"  Processed {i}/{len(sequences)}...")
         seq_id = record.id.split('|')[1] if '|' in record.id else record.id
-        features = extract_medoid_features(str(record.seq), seq_id, medoid_info, 'NON_AFP')
+        features = extract_medoid_features(str(record.seq), seq_id, medoid_info, 'NON_AFP', reviewed=False)
         all_features.append(features)
     
     # Save
