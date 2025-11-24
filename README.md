@@ -19,7 +19,7 @@ Antifreeze_BME/
 │   ├── sequence_analysis/   # MSA, phylogeny, motifs
 │   ├── feature_extraction/  # Feature extraction tools
 │   └── machine_learning/    # HMM and classification model
-├── model_results/       # HMM model outputs
+├── model_results/       # HMM model outputs and Classification model outputs
 └── README.md
 ```
 
@@ -130,7 +130,7 @@ python scripts/feature_extraction/extract_tree_features.py
 - **extract_msa_features.py**: Within-type conservation features (AFP-only)
 
 ### Machine Learning
-- **train_hmm.ipynb**: Trains positive and negative HMM models
+- **train_hmm.ipynb**: Trains positive and negative HMM models to determine the best model parameters
 - **classification.ipynb**: Is our classification model for AFP versus non-AFP
 
 ## Requirements
