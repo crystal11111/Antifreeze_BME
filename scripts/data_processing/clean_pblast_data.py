@@ -9,7 +9,7 @@ def normalize_id(seq_id):
         seq_id = seq_id.split('|')[1]
     return seq_id.split('.')[0]
 
-afp_types = ['type1', 'type2', 'type3', 'type4']  # AFGP removed
+afp_types = ['type1', 'type2', 'type3', 'type4', 'afgp']
 
 # Load reviewed IDs so they can be excluded from non-reviewed set
 reviewed_data_file = "data/raw/uniprotkb_fishAFP.fasta"
