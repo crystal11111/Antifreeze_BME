@@ -56,41 +56,114 @@ def create_alignment_figure():
 
 def create_performance_figure():
     results_file = os.path.join(RESULTS, 'protein_analysis_metrics.json')
-    if os.path.exists(results_file):
-        with open(results_file, 'r') as f:
-            results = json.load(f)
-        types = [t for t in ['type1','type2','type3','type4','afgp'] if t in results]
-        data = []
-        for t in types:
-            r = results[t]
-            data.append({
-                'Type': t.upper(),
-                'ROC-AUC': r.get('mean_roc_auc', 0),
-                'PR-AUC': r.get('mean_pr_auc', 0),
-                'Accuracy': r.get('mean_accuracy', 0),
-                'F1': r.get('mean_f1', 0)
-            })
-        df = pd.DataFrame(data)
-        if df.empty:
-            fig, ax = plt.subplots(figsize=(12, 10))
-            ax.text(0.5,0.5,'No metrics found in JSON', ha='center', va='center'); ax.axis('off')
-        else:
-            fig, axes = plt.subplots(2, 2, figsize=(12, 10))
-            axes[0,0].bar(df['Type'], df['ROC-AUC']); axes[0,0].set_ylim(0,1); axes[0,0].set_title('ROC-AUC by AFP Type')
-            axes[0,1].bar(df['Type'], df['PR-AUC']); axes[0,1].set_ylim(0,1); axes[0,1].set_title('PR-AUC by AFP Type')
-            x = np.arange(len(df)); w = 0.35
-            axes[1,0].bar(x-w/2, df['Accuracy'], w, label='Accuracy', alpha=0.7)
-            axes[1,0].bar(x+w/2, df['F1'], w, label='F1', alpha=0.7)
-            axes[1,0].set_ylim(0,1); axes[1,0].set_xticks(x); axes[1,0].set_xticklabels(df['Type']); axes[1,0].legend()
-            axes[1,1].axis('off')
-            tbl = axes[1,1].table(cellText=df.round(3).values, colLabels=df.columns,
-                                  cellLoc='center', loc='center', bbox=[0,0,1,1])
-            tbl.auto_set_font_size(False); tbl.set_fontsize(9); tbl.scale(1, 2)
-        plt.tight_layout()
-        df.to_csv(os.path.join(FIGDIR, 'figure3_metrics_table.csv'), index=False)
-    else:
+
+    def _collect_type_row(tname, payload):
+        """Return (row_dict or None) from a type payload."""
+        if not isinstance(payload, dict) or 'summary' not in payload:
+            return None
+        mm = payload.get('summary', {}).get('mean_metrics', {}) or {}
+        sd = payload.get('summary', {}).get('std_dev_metrics', {}) or {}
+        # Map fields present in your JSON
+        row = {
+            'Type': tname.upper(),
+            'AUC-ROC': mm.get('auc_roc', np.nan),
+            'Accuracy': mm.get('accuracy', np.nan),
+            'Precision': mm.get('precision', np.nan),
+            'Recall': mm.get('recall_sensitivity', np.nan),
+            'Specificity': mm.get('specificity', np.nan),
+            'F1': mm.get('f1_score', np.nan),
+            'MCC': mm.get('mcc', np.nan),
+            # (optional) attach std for the table if you like
+            'AUC-ROC (std)': sd.get('auc_roc', np.nan),
+            'Accuracy (std)': sd.get('accuracy', np.nan),
+            'F1 (std)': sd.get('f1_score', np.nan),
+        }
+        return row
+
+    if not os.path.exists(results_file):
         fig, ax = plt.subplots(figsize=(12, 10))
-        ax.text(0.5, 0.5, 'Run classification.ipynb to generate results', ha='center', va='center', fontsize=14); ax.axis('off')
+        ax.text(0.5, 0.5, 'Run classification.ipynb to generate results',
+                ha='center', va='center', fontsize=14)
+        ax.axis('off')
+        plt.savefig(os.path.join(FIGDIR, 'figure3_performance.png'), dpi=300, bbox_inches='tight')
+        plt.savefig(os.path.join(FIGDIR, 'figure3_performance.svg'), bbox_inches='tight')
+        print("✓ Figure 3 saved (placeholder)")
+        return
+
+    with open(results_file, 'r') as f:
+        results = json.load(f)
+
+    # Allowed types (order) — include AFGP if it has metrics
+    order = ['type1', 'type2', 'type3', 'type4', 'afgp']
+    rows = []
+    for t in order:
+        if t not in results:
+            continue
+        payload = results[t]
+        # Skip explicit error payloads (like AFGP in your file)
+        if isinstance(payload, dict) and 'error' in payload:
+            continue
+        row = _collect_type_row(t, payload)
+        if row:
+            rows.append(row)
+
+    df = pd.DataFrame(rows)
+    if df.empty:
+        fig, ax = plt.subplots(figsize=(12, 10))
+        ax.text(0.5, 0.5, 'No valid metrics in JSON', ha='center', va='center', fontsize=14)
+        ax.axis('off')
+        plt.savefig(os.path.join(FIGDIR, 'figure3_performance.png'), dpi=300, bbox_inches='tight')
+        plt.savefig(os.path.join(FIGDIR, 'figure3_performance.svg'), bbox_inches='tight')
+        print("✓ Figure 3 saved (no metrics)")
+        return
+
+    # --- Build the figure: AUC-ROC, Accuracy, F1, and a table ---
+    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+
+    # AUC-ROC
+    ax = axes[0, 0]
+    ax.bar(df['Type'], df['AUC-ROC'])
+    ax.set_ylabel('AUC-ROC')
+    ax.set_title('AUC-ROC by AFP Type')
+    ax.set_ylim(0, 1)
+    ax.grid(axis='y', alpha=0.3)
+
+    # Accuracy
+    ax = axes[0, 1]
+    ax.bar(df['Type'], df['Accuracy'])
+    ax.set_ylabel('Accuracy')
+    ax.set_title('Accuracy by AFP Type')
+    ax.set_ylim(0, 1)
+    ax.grid(axis='y', alpha=0.3)
+
+    # F1
+    ax = axes[1, 0]
+    ax.bar(df['Type'], df['F1'])
+    ax.set_ylabel('F1-Score')
+    ax.set_title('F1-Score by AFP Type')
+    ax.set_ylim(0, 1)
+    ax.grid(axis='y', alpha=0.3)
+
+    # Table (include more columns for detail)
+    ax = axes[1, 1]
+    ax.axis('off')
+    table_cols = ['Type', 'AUC-ROC', 'Accuracy', 'Precision', 'Recall', 'Specificity', 'F1', 'MCC']
+    shown = df[table_cols].round(3)
+    tbl = ax.table(
+        cellText=shown.values,
+        colLabels=shown.columns,
+        cellLoc='center',
+        loc='center',
+        bbox=[0, 0, 1, 1]
+    )
+    tbl.auto_set_font_size(False)
+    tbl.set_fontsize(9)
+    tbl.scale(1, 1.6)
+    ax.set_title('Performance Summary', pad=16)
+
+    plt.tight_layout()
+    # Save CSV for the paper repo
+    df.to_csv(os.path.join(FIGDIR, 'figure3_metrics_table.csv'), index=False)
     plt.savefig(os.path.join(FIGDIR, 'figure3_performance.png'), dpi=300, bbox_inches='tight')
     plt.savefig(os.path.join(FIGDIR, 'figure3_performance.svg'), bbox_inches='tight')
     print("✓ Figure 3 saved")
